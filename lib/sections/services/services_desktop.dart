@@ -31,8 +31,7 @@ class ServiceDesktopState extends State<ServiceDesktop> {
       child: Column(
         children: [
           const CustomSectionHeading(text: "\nWhat I Do"),
-          const CustomSectionSubHeading(
-              text: "I may not be perfect, but I'm surely of some help :)\n\n"),
+          const CustomSectionSubHeading(text: "I may not be perfect, but I'm surely of some help :)\n\n"),
           Wrap(
             runSpacing: height * 0.05,
             spacing: width * 0.05,
@@ -97,8 +96,7 @@ class ServiceCardBackWidget extends StatelessWidget {
         Container(
           width: 250.0,
           height: 0.5,
-          color:
-              _themeProvider.lightTheme ? Colors.grey[400] : Colors.grey[100],
+          color: _themeProvider.lightTheme ? Colors.grey[400] : Colors.grey[100],
         ),
         const SizedBox(height: 10.0),
         SizedBox(
@@ -109,30 +107,20 @@ class ServiceCardBackWidget extends StatelessWidget {
             onPressed: () => showDialog(
                 context: context,
                 builder: (contecxt) => AlertDialog(
-                      backgroundColor: _themeProvider.lightTheme
-                          ? Colors.white
-                          : Colors.grey[900],
+                      backgroundColor: _themeProvider.lightTheme ? Colors.white : Colors.grey[900],
                       title: AdaptiveText(
                         "Hire Me!",
-                        style: TextStyle(
-                            fontSize: 32.0,
-                            color: _themeProvider.lightTheme
-                                ? Colors.black
-                                : Colors.white),
+                        style:
+                            TextStyle(fontSize: 32.0, color: _themeProvider.lightTheme ? Colors.black : Colors.white),
                       ),
-                      actions: [
-                        TextButton(
-                            onPressed: () => Navigator.pop(context),
-                            child: const Text("Back"))
-                      ],
+                      actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text("Back"))],
                       content: Column(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CustomFilledBtn(
                             height: 40.0,
-                            onPressed: () => launchURL(
-                                "https://api.whatsapp.com/send?phone=+233271491104"),
+                            onPressed: () => launchURL("https://api.whatsapp.com/send?phone=+233271491104"),
                             btnColor: const Color(0xff34CB62),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -146,19 +134,14 @@ class ServiceCardBackWidget extends StatelessWidget {
                           const SizedBox(height: 20.0),
                           CustomFilledBtn(
                             height: 40.0,
-                            onPressed: () => launchURL(
-                                "https://www.upwork.com/freelancers/~0197b0f6aaeba9675f"),
+                            onPressed: () => launchURL("https://www.upwork.com/freelancers/~0197b0f6aaeba9675f"),
                             btnColor: const Color(0xff13A800),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Image.network(
-                                  "https://img.icons8.com/ios-filled/50/000000/upwork.png",
-                                  height: 35.0,
-                                  color: Colors.white,
-                                ),
-                                const SizedBox(width: 8.0),
-                                const Text("Upwork"),
+                              children: const [
+                                Icon(FontAwesomeIcons.telegram),
+                                SizedBox(width: 8.0),
+                                Text("Telegram"),
                               ],
                             ),
                           ),
@@ -167,10 +150,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                     )),
             child: const Text(
               "HIRE ME!",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16.0),
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16.0),
             ),
           ),
         )

@@ -15,8 +15,7 @@ class PortfolioMobileTab extends StatelessWidget {
     return Column(
       children: [
         const CustomSectionHeading(text: "\nPortfolio"),
-        const CustomSectionSubHeading(
-            text: "Here are few samples of my previous work :)\n\n"),
+        const CustomSectionSubHeading(text: "Here are few samples of my previous work :)\n\n"),
         CarouselSlider.builder(
           itemCount: 10,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
@@ -44,7 +43,7 @@ class PortfolioMobileTab extends StatelessWidget {
         OutlinedCustomBtn(
           btnText: "See More",
           onPressed: () {
-            launchURL("https://github.com/mhmzdev");
+            launchURL("https://github.com/senyomotey");
           },
         )
       ],

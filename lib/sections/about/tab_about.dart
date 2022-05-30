@@ -42,8 +42,7 @@ class AboutTab extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               "Who am I?",
-              style: GoogleFonts.montserrat(
-                  color: kPrimaryColor, fontSize: height * 0.028),
+              style: GoogleFonts.montserrat(color: kPrimaryColor, fontSize: height * 0.028),
             ),
           ),
           SizedBox(
@@ -88,8 +87,7 @@ class AboutTab extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               "Technologies I have worked with:",
-              style: GoogleFonts.montserrat(
-                  color: kPrimaryColor, fontSize: height * 0.018),
+              style: GoogleFonts.montserrat(color: kPrimaryColor, fontSize: height * 0.018),
             ),
           ),
           Row(

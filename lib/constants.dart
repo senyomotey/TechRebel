@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // Colors
-const Color kPrimaryColor = Color(0xffC0392B);
+const Color kPrimaryColor = Color.fromARGB(255, 43, 192, 83);
 
 // Social Media
 const kSocialIcons = [
-  "https://img.icons8.com/android/480/ffffff/twitter.png",
-  "https://img.icons8.com/metro/308/ffffff/linkedin.png",
-  "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-  "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
+  "assets/twitter.png",
+  "assets/linkedin.png",
+  "assets/github.png",
+  "assets/medium.png",
 ];
 
 const kSocialLinks = [
@@ -20,9 +20,8 @@ const kSocialLinks = [
 ];
 
 // URL Launcher
-void launchURL(String url) async => await launchUrl(Uri.parse(url))
-    ? await launchUrl(Uri.parse(url))
-    : throw 'Could not launch $url';
+void launchURL(String url) async =>
+    await launchUrl(Uri.parse(url)) ? await launchUrl(Uri.parse(url)) : throw 'Could not launch $url';
 
 // Community
 final kCommunityLogo = [
@@ -34,16 +33,7 @@ final kCommunityLinks = [
 ];
 
 // Tools & Tech
-final kTools = [
-  "Flutter",
-  "Dart",
-  "Python",
-  "Java",
-  "C++",
-  "HTML",
-  "CSS",
-  "Bootstrap"
-];
+final kTools = ["Flutter", "Dart", "Python", "Java", "C++", "HTML", "CSS", "Bootstrap"];
 
 // services
 final kServicesIcons = [
@@ -148,8 +138,4 @@ final kContactTitles = [
   "Email",
 ];
 
-final kContactDetails = [
-  "Tema, Ghana",
-  "(+233) 27 1491104",
-  "moteysenyo@gmail.com"
-];
+final kContactDetails = ["Tema, Ghana", "(+233) 27 1491104", "moteysenyo@gmail.com"];
