@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:portfolio/provider/theme_prefs.dart';
+import '../../provider/theme_prefs.dart';
 
 class ThemeProvider extends ChangeNotifier {
   ThemePreference darkThemePref = ThemePreference();

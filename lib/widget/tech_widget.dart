@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/adaptive_text.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/adaptive_text.dart';
 import 'package:provider/provider.dart';
 
 class ToolTechWidget extends StatelessWidget {

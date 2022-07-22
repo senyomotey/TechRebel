@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/about_me_data.dart';
-import 'package:portfolio/widget/adaptive_text.dart';
-import 'package:portfolio/widget/community_button.dart';
-import 'package:portfolio/widget/custom_button.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/tech_widget.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/about_me_data.dart';
+import '../../widget/adaptive_text.dart';
+import '../../widget/community_button.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/tech_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -50,8 +50,7 @@ class AboutDesktop extends StatelessWidget {
                     children: [
                       AdaptiveText(
                         "Who am I?",
-                        style: GoogleFonts.montserrat(
-                            color: kPrimaryColor, fontSize: height * 0.025),
+                        style: GoogleFonts.montserrat(color: kPrimaryColor, fontSize: height * 0.025),
                       ),
                       SizedBox(
                         height: height * 0.03,
@@ -61,9 +60,7 @@ class AboutDesktop extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: height * 0.035,
                           fontWeight: FontWeight.w400,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
+                          color: themeProvider.lightTheme ? Colors.black : Colors.white,
                         ),
                       ),
                       SizedBox(
@@ -95,8 +92,7 @@ class AboutDesktop extends StatelessWidget {
                       ),
                       AdaptiveText(
                         "Technologies I have worked with:",
-                        style: GoogleFonts.montserrat(
-                            color: kPrimaryColor, fontSize: height * 0.018),
+                        style: GoogleFonts.montserrat(color: kPrimaryColor, fontSize: height * 0.018),
                       ),
                       Row(
                         children: kTools

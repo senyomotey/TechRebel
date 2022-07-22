@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/animations/bottom_animation.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/project_card.dart';
+import '../../animations/bottom_animation.dart';
+import '../../constants.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/project_card.dart';
 
 class ContactDesktop extends StatelessWidget {
   const ContactDesktop({Key? key}) : super(key: key);
@@ -13,15 +13,13 @@ class ContactDesktop extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: width * 0.02, vertical: height * 0.02),
+      padding: EdgeInsets.symmetric(horizontal: width * 0.02, vertical: height * 0.02),
       child: Column(
         children: [
           const CustomSectionHeading(
             text: "\nGet in Touch",
           ),
-          const CustomSectionSubHeading(
-              text: "Let's build something together :)\n\n"),
+          const CustomSectionSubHeading(text: "Let's build something together :)\n\n"),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(

@@ -1,13 +1,13 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/adaptive_text.dart';
-import 'package:portfolio/widget/custom_button.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/service_card.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/adaptive_text.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/service_card.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/constants.dart';
+import '../../constants.dart';
 import 'package:provider/provider.dart';
 
 class ServiceDesktop extends StatefulWidget {

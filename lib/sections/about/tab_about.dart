@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/custom_button.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_text_heading.dart';
 import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/widget/about_me_data.dart';
-import 'package:portfolio/widget/community_button.dart';
-import 'package:portfolio/widget/tech_widget.dart';
+import '../../constants.dart';
+import '../../widget/about_me_data.dart';
+import '../../widget/community_button.dart';
+import '../../widget/tech_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutTab extends StatelessWidget {

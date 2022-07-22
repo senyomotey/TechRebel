@@ -1,18 +1,18 @@
 import 'package:flutter/rendering.dart';
-import 'package:portfolio/animations/entrance_fader.dart';
-import 'package:portfolio/provider/theme_provider.dart';
+import '../../animations/entrance_fader.dart';
+import '../../provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/sections/about/about.dart';
-import 'package:portfolio/sections/contact/contact.dart';
-import 'package:portfolio/sections/home/home.dart';
-import 'package:portfolio/sections/navbar/navbar_logo.dart';
-import 'package:portfolio/sections/portfolio/portfolio.dart';
-import 'package:portfolio/sections/services/services.dart';
-import 'package:portfolio/widget/arrow_on_top.dart';
-import 'package:portfolio/widget/footer.dart';
+import '../../constants.dart';
+import '../../sections/about/about.dart';
+import '../../sections/contact/contact.dart';
+import '../../sections/home/home.dart';
+import '../../sections/navbar/navbar_logo.dart';
+import '../../sections/portfolio/portfolio.dart';
+import '../../sections/services/services.dart';
+import '../../widget/arrow_on_top.dart';
+import '../../widget/footer.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MainPage extends StatefulWidget {
@@ -28,13 +28,7 @@ class MainPageState extends State<MainPage> {
   bool _isScrollingDown = false;
   ScrollController _scrollController = ScrollController();
 
-  final List<String> _sectionsName = [
-    "HOME",
-    "ABOUT",
-    "SERVICES",
-    "PROJECTS",
-    "CONTACT"
-  ];
+  final List<String> _sectionsName = ["HOME", "ABOUT", "SERVICES", "PROJECTS", "CONTACT"];
 
   final List<IconData> _sectionsIcons = [
     Icons.home,
@@ -83,16 +77,14 @@ class MainPageState extends State<MainPage> {
   void initState() {
     _scrollController = _themeProviders.controller;
     _scrollController.addListener(() {
-      if (_scrollController.position.userScrollDirection ==
-          ScrollDirection.reverse) {
+      if (_scrollController.position.userScrollDirection == ScrollDirection.reverse) {
         if (!_isScrollingDown) {
           _isScrollingDown = true;
           setState(() {});
         }
       }
 
-      if (_scrollController.position.userScrollDirection ==
-          ScrollDirection.forward) {
+      if (_scrollController.position.userScrollDirection == ScrollDirection.forward) {
         if (_isScrollingDown) {
           _isScrollingDown = false;
           setState(() {});
@@ -117,8 +109,7 @@ class MainPageState extends State<MainPage> {
       backgroundColor: themeProv.lightTheme ? Colors.white : Colors.black,
       appBar: MediaQuery.of(context).size.width < 760
           ? AppBar(
-              iconTheme: IconThemeData(
-                  color: themeProv.lightTheme ? Colors.black : Colors.white),
+              iconTheme: IconThemeData(color: themeProv.lightTheme ? Colors.black : Colors.white),
               elevation: 0,
               backgroundColor: Colors.transparent,
               actions: [
@@ -129,9 +120,7 @@ class MainPageState extends State<MainPage> {
               ],
             )
           : _appBarTabDesktop(themeProv),
-      drawer: MediaQuery.of(context).size.width < 760
-          ? _appBarMobile(themeProv)
-          : null,
+      drawer: MediaQuery.of(context).size.width < 760 ? _appBarMobile(themeProv) : null,
       body: Stack(
         children: [
           SectionsBody(
@@ -154,8 +143,7 @@ class MainPageState extends State<MainPage> {
     );
   }
 
-  Widget _appBarActions(
-      String childText, int index, IconData icon, ThemeProvider themeProvider) {
+  Widget _appBarActions(String childText, int index, IconData icon, ThemeProvider themeProvider) {
     return MediaQuery.of(context).size.width > 760
         ? EntranceFader(
             offset: const Offset(0, -10),
@@ -170,8 +158,7 @@ class MainPageState extends State<MainPage> {
                 child: Text(
                   childText,
                   style: TextStyle(
-                    color:
-                        themeProvider.lightTheme ? Colors.black : Colors.white,
+                    color: themeProvider.lightTheme ? Colors.black : Colors.white,
                   ),
                 ),
               ),
@@ -192,9 +179,7 @@ class MainPageState extends State<MainPage> {
                 ),
                 title: Text(childText,
                     style: TextStyle(
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
+                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
                     )),
               ),
             ),
@@ -235,12 +220,10 @@ class MainPageState extends State<MainPage> {
             child: MaterialButton(
               hoverColor: kPrimaryColor.withAlpha(150),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5.0),
-                  side: const BorderSide(color: kPrimaryColor)),
+                  borderRadius: BorderRadius.circular(5.0), side: const BorderSide(color: kPrimaryColor)),
               onPressed: () {
-                html.window.open(
-                    'https://drive.google.com/file/d/1FaHIzT9FigDHLx8NlxFIyQfjJTyN9WQ6/view?usp=sharing',
-                    "pdf");
+                html.window
+                    .open('https://drive.google.com/file/d/1FaHIzT9FigDHLx8NlxFIyQfjJTyN9WQ6/view?usp=sharing', "pdf");
               },
               child: Text(
                 "RESUME",
@@ -291,9 +274,7 @@ class MainPageState extends State<MainPage> {
                   Icons.light_mode,
                   color: kPrimaryColor,
                 ),
-                title: Text("Dark Mode",
-                    style: TextStyle(
-                        color: theme.lightTheme ? Colors.black : Colors.white)),
+                title: Text("Dark Mode", style: TextStyle(color: theme.lightTheme ? Colors.black : Colors.white)),
                 trailing: Switch(
                   inactiveTrackColor: Colors.grey,
                   value: !theme.lightTheme,
@@ -313,11 +294,9 @@ class MainPageState extends State<MainPage> {
                 child: MaterialButton(
                   hoverColor: kPrimaryColor.withAlpha(150),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      side: const BorderSide(color: kPrimaryColor)),
+                      borderRadius: BorderRadius.circular(5.0), side: const BorderSide(color: kPrimaryColor)),
                   onPressed: () {
-                    launchURL(
-                        "https://drive.google.com/file/d/1FaHIzT9FigDHLx8NlxFIyQfjJTyN9WQ6/view?usp=sharing");
+                    launchURL("https://drive.google.com/file/d/1FaHIzT9FigDHLx8NlxFIyQfjJTyN9WQ6/view?usp=sharing");
                   },
                   child: ListTile(
                     leading: const Icon(

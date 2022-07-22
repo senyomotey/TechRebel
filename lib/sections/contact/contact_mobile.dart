@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/project_card.dart';
+import '../../constants.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/project_card.dart';
 
 class ContactMobileTab extends StatelessWidget {
   const ContactMobileTab({Key? key}) : super(key: key);
@@ -14,8 +14,7 @@ class ContactMobileTab extends StatelessWidget {
     return Column(
       children: [
         const CustomSectionHeading(text: "\nGet in Touch"),
-        const CustomSectionSubHeading(
-            text: "Let's build something together :)\n\n"),
+        const CustomSectionSubHeading(text: "Let's build something together :)\n\n"),
         CarouselSlider.builder(
           itemCount: 3,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(

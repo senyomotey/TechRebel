@@ -1,5 +1,8 @@
-name: portfolio
-description: A new Flutter project.
+name: techrebel.dev
+description: This is a software developer portfolio which I built with Flutter.
+
+# Within this app is a brief introduction about me, my educational background, information about my skillset, links to projects I've worked on or contributed to and my contact information.
+# Have fun exploring this app and also hire me if you're impressed.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -29,18 +32,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^2.0.0
+  google_fonts: ^3.0.1
   url_launcher: ^6.1.2
-  responsive_builder: ^0.4.1
+  responsive_builder: ^0.4.2
   carousel_slider: ^4.0.0
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^10.1.0
   universal_html: ^2.0.4
-  http: ^0.13.1
+  http: ^0.13.4
   flutter_html: any
   url_strategy: ^0.2.0
-  provider: ^6.0.1
-  shared_preferences: ^2.0.6
+  provider: ^6.0.3
+  shared_preferences: ^2.0.15
   flip_card: ^0.6.0
   cupertino_icons: ^1.0.2
 

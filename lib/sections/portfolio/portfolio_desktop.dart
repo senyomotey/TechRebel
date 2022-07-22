@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/animations/bottom_animation.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/project_card.dart';
-import 'package:portfolio/constants.dart';
+import '../../animations/bottom_animation.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/project_card.dart';
+import '../../constants.dart';
 
 class PortfolioDesktop extends StatefulWidget {
   const PortfolioDesktop({Key? key}) : super(key: key);
@@ -21,13 +21,11 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: width * 0.02, vertical: height * 0.02),
+      padding: EdgeInsets.symmetric(horizontal: width * 0.02, vertical: height * 0.02),
       child: Column(
         children: [
           const CustomSectionHeading(text: "\nPortfolio"),
-          const CustomSectionSubHeading(
-              text: "Here are few samples of my previous work :)\n\n"),
+          const CustomSectionSubHeading(text: "Here are few samples of my previous work :)\n\n"),
           SizedBox(
             height: width > 1200 ? height * 0.45 : width * 0.21,
             child: ListView.separated(

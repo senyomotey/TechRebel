@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/sections/home/home_desktop.dart';
-import 'package:portfolio/sections/home/home_mobile.dart';
-import 'package:portfolio/sections/home/home_tab.dart';
+import '../../sections/home/home_desktop.dart';
+import '../../sections/home/home_mobile.dart';
+import '../../sections/home/home_tab.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomePage extends StatelessWidget {

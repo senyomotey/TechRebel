@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/sections/portfolio/portfolio_desktop.dart';
-import 'package:portfolio/sections/portfolio/portfolio_mobile.dart';
+import '../../sections/portfolio/portfolio_desktop.dart';
+import '../../sections/portfolio/portfolio_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Portfolio extends StatelessWidget {

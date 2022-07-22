@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class SocialMediaIconBtn extends StatelessWidget {
@@ -22,7 +22,7 @@ class SocialMediaIconBtn extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding!),
       child: IconButton(
-        icon: Image.network(
+        icon: Image.asset(
           icon!,
           color: themeProvider.lightTheme ? Colors.black : Colors.white,
         ),

@@ -1,10 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/social_icon.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/social_icon.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -29,8 +30,7 @@ class HomeTab extends StatelessWidget {
           //   ),
           // ),
           Container(
-            margin: EdgeInsets.fromLTRB(
-                width * 0.1, width < 740 ? height * 0.15 : height * 0.2, 0, 0),
+            margin: EdgeInsets.fromLTRB(width * 0.1, width < 740 ? height * 0.15 : height * 0.2, 0, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -42,9 +42,7 @@ class HomeTab extends StatelessWidget {
                       style: GoogleFonts.montserrat(
                         fontSize: height * 0.03,
                         fontWeight: FontWeight.w300,
-                        color: themeProvider.lightTheme
-                            ? Colors.black
-                            : Colors.white,
+                        color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       ),
                     ),
                     Image.asset(
@@ -61,9 +59,7 @@ class HomeTab extends StatelessWidget {
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.07,
                       fontWeight: FontWeight.w100,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
+                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       letterSpacing: 1.5),
                 ),
                 Text(
@@ -71,8 +67,7 @@ class HomeTab extends StatelessWidget {
                   style: GoogleFonts.montserrat(
                     fontSize: height * 0.07,
                     fontWeight: FontWeight.w500,
-                    color:
-                        themeProvider.lightTheme ? Colors.black : Colors.white,
+                    color: themeProvider.lightTheme ? Colors.black : Colors.white,
                   ),
                 ),
                 Row(
@@ -87,15 +82,9 @@ class HomeTab extends StatelessWidget {
                         textStyle: GoogleFonts.montserrat(
                           fontSize: height * 0.03,
                           fontWeight: FontWeight.w200,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
+                          color: themeProvider.lightTheme ? Colors.black : Colors.white,
                         ),
-                        text: const [
-                          " Flutter Developer",
-                          " Backend Developer",
-                          " Technical Writer"
-                        ]),
+                        text: const [" Flutter Developer", " Backend Developer", " Technical Writer"]),
                   ],
                 ),
                 SizedBox(

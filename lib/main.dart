@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/provider/theme_styles.dart';
-import 'package:portfolio/sections/main_section.dart';
+
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
+
+import 'provider/theme_provider.dart';
+import 'provider/theme_styles.dart';
+import 'sections/main_section.dart';
 
 void main() {
   runApp(const MyApp());

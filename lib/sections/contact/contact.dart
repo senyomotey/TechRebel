@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/sections/contact/contact_desktop.dart';
-import 'package:portfolio/sections/contact/contact_mobile.dart';
+import '../../sections/contact/contact_desktop.dart';
+import '../../sections/contact/contact_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Contact extends StatelessWidget {

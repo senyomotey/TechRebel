@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/provider/theme_provider.dart';
+import '../../provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class AboutMeData extends StatelessWidget {

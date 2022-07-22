@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/sections/services/services_desktop.dart';
-import 'package:portfolio/sections/services/services_mobile.dart';
+import '../../sections/services/services_desktop.dart';
+import '../../sections/services/services_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Services extends StatelessWidget {

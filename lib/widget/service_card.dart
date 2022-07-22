@@ -2,8 +2,8 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class ServiceCard extends StatefulWidget {

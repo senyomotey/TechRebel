@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/widget/custom_button.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/project_card.dart';
+import '../../constants.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/project_card.dart';
 
 class PortfolioMobileTab extends StatelessWidget {
   const PortfolioMobileTab({Key? key}) : super(key: key);

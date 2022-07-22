@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/sections/services/services_desktop.dart';
-import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/service_card.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
+import '../../sections/services/services_desktop.dart';
+import '../../widget/custom_text_heading.dart';
+import '../../widget/service_card.dart';
 import 'package:provider/provider.dart';
 
 class ServiceMobile extends StatelessWidget {
@@ -18,8 +18,7 @@ class ServiceMobile extends StatelessWidget {
     return Column(
       children: [
         const CustomSectionHeading(text: "\nWhat I Do"),
-        const CustomSectionSubHeading(
-            text: "I may not be perfect, but I'm surely of some help :)\n\n"),
+        const CustomSectionSubHeading(text: "I may not be perfect, but I'm surely of some help :)\n\n"),
         CarouselSlider.builder(
           itemCount: 5,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(

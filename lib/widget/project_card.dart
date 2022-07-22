@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/adaptive_text.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/adaptive_text.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -111,9 +111,7 @@ class ProjectCardState extends State<ProjectCard> {
                                   fontSize: height * 0.015,
                                   letterSpacing: 1.5,
                                   fontWeight: FontWeight.w400,
-                                  color: themeProvider.lightTheme
-                                      ? Colors.black
-                                      : Colors.white,
+                                  color: themeProvider.lightTheme ? Colors.black : Colors.white,
                                 ),
                               ),
                             ],
@@ -139,9 +137,7 @@ class ProjectCardState extends State<ProjectCard> {
                           fontSize: height * 0.02,
                           letterSpacing: 1.5,
                           fontWeight: FontWeight.w400,
-                          color: themeProvider.lightTheme
-                              ? Colors.white
-                              : Colors.grey[900],
+                          color: themeProvider.lightTheme ? Colors.white : Colors.grey[900],
                         ),
                       )
                     : Container(),
@@ -154,9 +150,7 @@ class ProjectCardState extends State<ProjectCard> {
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.015,
                       letterSpacing: 2.0,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
+                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       fontWeight: FontWeight.w300,
                       height: width >= 600 ? 2.0 : 1.2),
                 ),

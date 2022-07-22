@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
+import '../../constants.dart';
 
 class ThemeStyles {
   static ThemeData themeData(bool lightTheme, BuildContext buildContext) {
@@ -12,8 +12,7 @@ class ThemeStyles {
             primaryColor: kPrimaryColor,
             highlightColor: Colors.black,
             canvasColor: Colors.white,
-            colorScheme:
-                ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
               secondary: Colors.black,
               brightness: Brightness.light,
             ),
@@ -25,8 +24,7 @@ class ThemeStyles {
             primaryColor: kPrimaryColor,
             highlightColor: kPrimaryColor,
             canvasColor: Colors.white,
-            colorScheme:
-                ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
               secondary: kPrimaryColor,
               brightness: Brightness.dark,
             ),

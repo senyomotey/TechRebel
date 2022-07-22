@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/social_icon.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/social_icon.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -40,9 +40,7 @@ class HomeMobile extends StatelessWidget {
                       "HEY THERE! ",
                       style: GoogleFonts.montserrat(
                           fontSize: height * 0.025,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
+                          color: themeProvider.lightTheme ? Colors.black : Colors.white,
                           fontWeight: FontWeight.w200),
                     ),
                     Image.asset(
@@ -58,18 +56,14 @@ class HomeMobile extends StatelessWidget {
                   "Senyo",
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.055,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
+                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       fontWeight: FontWeight.w100,
                       letterSpacing: 1.1),
                 ),
                 Text(
                   "Motey",
                   style: GoogleFonts.montserrat(
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
+                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       fontSize: height * 0.055,
                       fontWeight: FontWeight.w500),
                 ),
@@ -84,15 +78,9 @@ class HomeMobile extends StatelessWidget {
                       speed: const Duration(milliseconds: 50),
                       textStyle: GoogleFonts.montserrat(
                           fontSize: height * 0.03,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
+                          color: themeProvider.lightTheme ? Colors.black : Colors.white,
                           fontWeight: FontWeight.w200),
-                      text: const [
-                        " Flutter Developer",
-                        " Backend Developer",
-                        " Technical Writer"
-                      ],
+                      text: const [" Flutter Developer", " Backend Developer", " Technical Writer"],
                     ),
                   ],
                 ),

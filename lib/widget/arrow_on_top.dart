@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants.dart';
-import 'package:portfolio/provider/theme_provider.dart';
+import '../../constants.dart';
+import '../../provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class ArrowOnTop extends StatefulWidget {
@@ -40,9 +40,7 @@ class ArrowOnTopState extends State<ArrowOnTop> {
             },
             child: Container(
               decoration: BoxDecoration(
-                color: themeProvider.lightTheme
-                    ? Colors.grey[200]
-                    : Colors.grey[900],
+                color: themeProvider.lightTheme ? Colors.grey[200] : Colors.grey[900],
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8.0),
                   bottomLeft: Radius.circular(8.0),
@@ -50,9 +48,7 @@ class ArrowOnTopState extends State<ArrowOnTop> {
                 boxShadow: isHover
                     ? [
                         BoxShadow(
-                          color: themeProvider.lightTheme
-                              ? Colors.black12
-                              : kPrimaryColor.withAlpha(200),
+                          color: themeProvider.lightTheme ? Colors.black12 : kPrimaryColor.withAlpha(200),
                           blurRadius: 12.0,
                           offset: const Offset(2.0, 3.0),
                         )

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/provider/theme_provider.dart';
-import 'package:portfolio/widget/adaptive_text.dart';
+import '../../provider/theme_provider.dart';
+import '../../widget/adaptive_text.dart';
 import 'package:provider/provider.dart';
 
 class CustomSectionHeading extends StatelessWidget {
@@ -30,8 +30,7 @@ class CustomSectionHeading extends StatelessWidget {
 class CustomSectionSubHeading extends StatelessWidget {
   final String text;
 
-  const CustomSectionSubHeading({Key? key, required this.text})
-      : super(key: key);
+  const CustomSectionSubHeading({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
