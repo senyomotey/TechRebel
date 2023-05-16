@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../sections/about/desktop_about.dart';
-import '../../sections/about/mobile_about.dart';
-import '../../sections/about/tab_about.dart';
+import 'about_desktop.dart';
+import 'about_mobile.dart';
+import 'about_tab.dart';
 
 import 'package:responsive_builder/responsive_builder.dart';
 

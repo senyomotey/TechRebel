@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../sections/portfolio/portfolio_desktop.dart';
-import '../../sections/portfolio/portfolio_mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'projects_mobile.dart';
+import 'projects_desktop.dart';
 
 class Portfolio extends StatelessWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -9,9 +10,9 @@ class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: const PortfolioMobileTab(),
-      tablet: const PortfolioMobileTab(),
-      desktop: const PortfolioDesktop(),
+      mobile: const ProjectsMobile(),
+      tablet: const ProjectsMobile(),
+      desktop: const ProjectsDesktop(),
     );
   }
 }

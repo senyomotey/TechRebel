@@ -10,18 +10,10 @@ class NavBarLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     return Container(
-      // padding: EdgeInsets.fromLTRB(
-      //     MediaQuery.of(context).size.width < 1100 ? 0.0 : 20.0, 20.0, 0, 0),
+      padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width < 1100 ? 0.0 : 20.0, 20.0, 0, 0),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Text(
-          //   "< ",
-          //   style: TextStyle(
-          //     fontSize: height ?? 20,
-          //     color: themeProvider.lightTheme ? Colors.black : Colors.white,
-          //   ),
-          // ),
           Container(
             height: 45,
             width: 45,
@@ -44,21 +36,28 @@ class NavBarLogo extends StatelessWidget {
             ),
           ),
           Text(
+            "< ",
+            style: TextStyle(
+              fontSize: 25,
+              color: themeProvider.lightTheme ? Colors.black : Colors.white,
+            ),
+          ),
+          Text(
             "Motey",
             style: TextStyle(
-              // fontFamily: "Agustina",
-              fontSize: height ?? 20,
+              fontFamily: "Agustina",
+              fontSize: 25,
               fontWeight: FontWeight.w400,
               color: themeProvider.lightTheme ? Colors.black : Colors.white,
             ),
           ),
-          // Text(
-          //   MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
-          //   style: TextStyle(
-          //     fontSize: height ?? 20,
-          //     color: themeProvider.lightTheme ? Colors.black : Colors.white,
-          //   ),
-          // )
+          Text(
+            MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
+            style: TextStyle(
+              fontSize: 25,
+              color: themeProvider.lightTheme ? Colors.black : Colors.white,
+            ),
+          )
         ],
       ),
     );

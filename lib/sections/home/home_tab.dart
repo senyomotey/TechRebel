@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 
 import '../../constants.dart';
 import '../../provider/theme_provider.dart';
-import '../../widget/social_icon.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -90,18 +89,18 @@ class HomeTab extends StatelessWidget {
                 SizedBox(
                   height: height * 0.045,
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    for (int i = 0; i < kSocialIcons.length; i++)
-                      SocialMediaIconBtn(
-                        icon: kSocialIcons[i],
-                        socialLink: kSocialLinks[i],
-                        height: height * 0.035,
-                        horizontalPadding: width * 0.01,
-                      )
-                  ],
-                )
+                // Row(
+                //   mainAxisSize: MainAxisSize.min,
+                //   children: [
+                //     for (int i = 0; i < kSocialIcons.length; i++)
+                //       SocialMediaIconBtn(
+                //         icon: kSocialIcons[i],
+                //         socialLink: kSocialLinks[i],
+                //         height: height * 0.035,
+                //         horizontalPadding: width * 0.01,
+                //       )
+                //   ],
+                // )
               ],
             ),
           ),

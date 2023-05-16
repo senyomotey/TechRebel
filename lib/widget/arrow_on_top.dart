@@ -43,7 +43,9 @@ class ArrowOnTopState extends State<ArrowOnTop> {
                 color: themeProvider.lightTheme ? Colors.grey[200] : Colors.grey[900],
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8.0),
+                  topRight: Radius.circular(8.0),
                   bottomLeft: Radius.circular(8.0),
+                  bottomRight: Radius.circular(8.0),
                 ),
                 boxShadow: isHover
                     ? [

@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import '../../provider/theme_provider.dart';
-import '../../widget/social_icon.dart';
+import '../../widget/social_icon_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -43,10 +43,10 @@ class HomeMobile extends StatelessWidget {
                           color: themeProvider.lightTheme ? Colors.black : Colors.white,
                           fontWeight: FontWeight.w200),
                     ),
-                    Image.asset(
-                      "assets/hi.gif",
-                      height: height * 0.03,
-                    ),
+                    // Image.asset(
+                    //   "assets/hi.gif",
+                    //   height: height * 0.03,
+                    // ),
                   ],
                 ),
                 SizedBox(
@@ -87,18 +87,18 @@ class HomeMobile extends StatelessWidget {
                 SizedBox(
                   height: height * 0.035,
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    for (int i = 0; i < kSocialIcons.length; i++)
-                      SocialMediaIconBtn(
-                        icon: kSocialIcons[i],
-                        socialLink: kSocialLinks[i],
-                        height: height * 0.03,
-                        horizontalPadding: 2.0,
-                      )
-                  ],
-                )
+                // Row(
+                //   mainAxisSize: MainAxisSize.min,
+                //   children: [
+                //     for (int i = 0; i < kSocialIcons.length; i++)
+                //       SocialMediaIconBtn(
+                //         icon: kSocialIcons[i],
+                //         socialLink: kSocialLinks[i],
+                //         height: height * 0.03,
+                //         horizontalPadding: 2.0,
+                //       )
+                //   ],
+                // )
               ],
             ),
           ),

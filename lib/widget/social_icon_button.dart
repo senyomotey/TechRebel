@@ -3,13 +3,13 @@ import '../../constants.dart';
 import '../../provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-class SocialMediaIconBtn extends StatelessWidget {
+class SocialMediaIconButton extends StatelessWidget {
   final String? icon;
   final String? socialLink;
   final double? height;
   final double? horizontalPadding;
 
-  const SocialMediaIconBtn({
+  const SocialMediaIconButton({
     Key? key,
     this.icon,
     this.socialLink,
@@ -30,7 +30,7 @@ class SocialMediaIconBtn extends StatelessWidget {
         onPressed: () => launchURL(
           socialLink!,
         ),
-        hoverColor: kPrimaryColor,
+        // hoverColor: kPrimaryColor,
       ),
     );
   }
