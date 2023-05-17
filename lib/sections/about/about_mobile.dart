@@ -1,9 +1,8 @@
-import 'dart:html';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:techrebel.dev/widget/photo_card.dart';
+import 'package:universal_html/html.dart' as html;
 import '../../constants.dart';
 import '../../provider/theme_provider.dart';
 import '../../widget/custom_text_heading.dart';
@@ -57,7 +56,7 @@ class AboutMobile extends StatelessWidget {
                   child: ElevatedButton.icon(
                     onPressed: () {
                       kIsWeb
-                          ? window.open(
+                          ? html.window.open(
                               'https://drive.google.com/file/d/1FaHIzT9FigDHLx8NlxFIyQfjJTyN9WQ6/view?usp=sharing',
                               "pdf")
                           : launchURL(
@@ -122,6 +121,9 @@ class AboutMobile extends StatelessWidget {
                 child: PhotoCard(index: 4),
               ),
             ],
+          ),
+          SizedBox(
+            height: height * 0.1,
           ),
         ],
       ),

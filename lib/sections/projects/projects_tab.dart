@@ -18,6 +18,27 @@ class ProjectsMobile extends StatelessWidget {
       children: [
         const CustomSectionHeading(text: "\nPortfolio"),
         const CustomSectionSubHeading(text: "Here are few samples of my previous work :)\n\n"),
+        // CarouselSlider.builder(
+        //   itemCount: 10,
+        //   itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
+        //     padding: const EdgeInsets.symmetric(vertical: 15.0),
+        //     child: ProjectCard(
+        //       cardWidth: width < 650 ? width * 0.8 : width * 0.4,
+        //       projectIcon: kProjectsIcons[i],
+        //       projectTitle: kProjectsTitles[i],
+        //       projectDescription: kProjectsDescriptions[i],
+        //       projectLink: kProjectsLinks[i],
+        //     ),
+        //   ),
+        //   options: CarouselOptions(
+        //       height: height * 0.4,
+        //       autoPlay: true,
+        //       autoPlayInterval: const Duration(seconds: 5),
+        //       enlargeCenterPage: true,
+        //       autoPlayCurve: Curves.fastOutSlowIn,
+        //       autoPlayAnimationDuration: const Duration(milliseconds: 800),
+        //       enableInfiniteScroll: false),
+        // ),
         Container(
           width: width < 650 ? width * 0.8 : width * 0.4,
           alignment: Alignment.topCenter,
@@ -26,8 +47,17 @@ class ProjectsMobile extends StatelessWidget {
             children: [
               Container(
                 width: width < 650 ? width * 0.8 : width * 0.4,
-                height: width < 650 ? height * 0.28 : height * 0.28,
+                height: width < 650 ? height * 0.35 : height * 0.35,
                 alignment: Alignment.center,
+                // child: AdaptiveText(
+                //   "May",
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: MediaQuery.of(context).size.height * 0.02,
+                //     fontWeight: FontWeight.w800,
+                //     color: Colors.black,
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
                 decoration: BoxDecoration(
                   // color: Colors.green,
                   image: DecorationImage(
@@ -106,8 +136,17 @@ class ProjectsMobile extends StatelessWidget {
             children: [
               Container(
                 width: width < 650 ? width * 0.8 : width * 0.4,
-                height: width < 650 ? height * 0.28 : height * 0.28,
+                height: width < 650 ? height * 0.35 : height * 0.35,
                 alignment: Alignment.center,
+                // child: AdaptiveText(
+                //   "May",
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: MediaQuery.of(context).size.height * 0.02,
+                //     fontWeight: FontWeight.w800,
+                //     color: Colors.black,
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
                 decoration: BoxDecoration(
                   // color: Colors.green,
                   image: DecorationImage(
@@ -186,8 +225,17 @@ class ProjectsMobile extends StatelessWidget {
             children: [
               Container(
                 width: width < 650 ? width * 0.8 : width * 0.4,
-                height: width < 650 ? height * 0.28 : height * 0.28,
+                height: width < 650 ? height * 0.35 : height * 0.35,
                 alignment: Alignment.center,
+                // child: AdaptiveText(
+                //   "May",
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: MediaQuery.of(context).size.height * 0.02,
+                //     fontWeight: FontWeight.w800,
+                //     color: Colors.black,
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
                 decoration: BoxDecoration(
                   // color: Colors.green,
                   image: DecorationImage(
@@ -266,8 +314,17 @@ class ProjectsMobile extends StatelessWidget {
             children: [
               Container(
                 width: width < 650 ? width * 0.8 : width * 0.4,
-                height: width < 650 ? height * 0.28 : height * 0.28,
+                height: width < 650 ? height * 0.35 : height * 0.35,
                 alignment: Alignment.center,
+                // child: AdaptiveText(
+                //   "May",
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: MediaQuery.of(context).size.height * 0.02,
+                //     fontWeight: FontWeight.w800,
+                //     color: Colors.black,
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
                 decoration: BoxDecoration(
                   // color: Colors.green,
                   image: DecorationImage(
@@ -346,8 +403,17 @@ class ProjectsMobile extends StatelessWidget {
             children: [
               Container(
                 width: width < 650 ? width * 0.8 : width * 0.4,
-                height: width < 650 ? height * 0.28 : height * 0.28,
+                height: width < 650 ? height * 0.35 : height * 0.35,
                 alignment: Alignment.center,
+                // child: AdaptiveText(
+                //   "May",
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: MediaQuery.of(context).size.height * 0.02,
+                //     fontWeight: FontWeight.w800,
+                //     color: Colors.black,
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
                 decoration: BoxDecoration(
                   // color: Colors.green,
                   image: DecorationImage(
@@ -426,8 +492,17 @@ class ProjectsMobile extends StatelessWidget {
             children: [
               Container(
                 width: width < 650 ? width * 0.8 : width * 0.4,
-                height: width < 650 ? height * 0.28 : height * 0.28,
+                height: width < 650 ? height * 0.35 : height * 0.35,
                 alignment: Alignment.center,
+                // child: AdaptiveText(
+                //   "May",
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: MediaQuery.of(context).size.height * 0.02,
+                //     fontWeight: FontWeight.w800,
+                //     color: Colors.black,
+                //   ),
+                //   textAlign: TextAlign.center,
+                // ),
                 decoration: BoxDecoration(
                   // color: Colors.green,
                   image: DecorationImage(

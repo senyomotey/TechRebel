@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 import 'provider/theme_provider.dart';
 import 'provider/theme_styles.dart';
@@ -39,7 +38,7 @@ class MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Motey',
+        title: 'Tech Rebel',
         theme: ThemeStyles.themeData(
           _themeProvider.lightTheme,
           context,

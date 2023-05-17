@@ -9,7 +9,6 @@ import '../../sections/contact/contact.dart';
 import '../../sections/home/home.dart';
 import '../../sections/navbar/navbar_logo.dart';
 import 'projects/projects.dart';
-import '../../sections/services/services.dart';
 import '../../widget/arrow_on_top.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -59,16 +58,16 @@ class MainPageState extends State<MainPage> {
   Widget sectionWidget(int i) {
     if (i == 0) {
       return const HomePage();
-      // } else if (i == 0) {
-      //   return const About();
-      // } else if (i == 2) {
-      //   return const TechStack();
-      // } else if (i == 3) {
-      //   return const Portfolio();
-      // } else if (i == 4) {
-      //   return const Experience();
-      // } else if (i == 5) {
-      //   return const Contact();
+    } else if (i == 1) {
+      return const About();
+    } else if (i == 2) {
+      return const TechStack();
+    } else if (i == 3) {
+      return const Portfolio();
+    } else if (i == 4) {
+      return const Experience();
+    } else if (i == 5) {
+      return const Contact();
     } else {
       return Container();
     }
@@ -112,7 +111,8 @@ class MainPageState extends State<MainPage> {
           ? AppBar(
               iconTheme: IconThemeData(color: themeProv.lightTheme ? Colors.black : Colors.white),
               elevation: 0,
-              backgroundColor: Colors.transparent,
+              // backgroundColor: Colors.transparent,
+              backgroundColor: themeProv.lightTheme ? Colors.white : Colors.black,
               actions: [
                 const NavBarLogo(),
                 SizedBox(
@@ -158,7 +158,7 @@ class MainPageState extends State<MainPage> {
                 onPressed: () => _scroll(index),
                 child: Text(
                   childText,
-                  style: TextStyle(
+                  style: GoogleFonts.montserrat(
                     color: themeProvider.lightTheme ? Colors.black : Colors.white,
                   ),
                 ),
@@ -174,14 +174,17 @@ class MainPageState extends State<MainPage> {
                 Navigator.pop(context);
               },
               child: ListTile(
-                leading: Icon(
-                  icon,
-                  color: kPrimaryColor,
+                // leading: Icon(
+                //   icon,
+                //   color: kPrimaryColor,
+                // ),
+                title: Text(
+                  childText,
+                  style: GoogleFonts.montserrat(
+                    color: themeProvider.lightTheme ? Colors.black : Colors.white,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-                title: Text(childText,
-                    style: TextStyle(
-                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
-                    )),
               ),
             ),
           );
@@ -210,44 +213,18 @@ class MainPageState extends State<MainPage> {
       actions: [
         for (int i = 0; i < _sectionsName.length; i++)
           _appBarActions(_sectionsName[i], i, _sectionsIcons[i], themeProv),
-        // EntranceFader(
-        //   offset: const Offset(0, -10),
-        //   delay: const Duration(milliseconds: 100),
-        //   duration: const Duration(milliseconds: 250),
-        //   child: Container(
-        //     height: 60.0,
-        //     width: 120.0,
-        //     padding: const EdgeInsets.all(8.0),
-        //     child: MaterialButton(
-        //       hoverColor: kPrimaryColor.withAlpha(150),
-        //       shape: RoundedRectangleBorder(
-        //           borderRadius: BorderRadius.circular(5.0), side: const BorderSide(color: kPrimaryColor)),
-        //       onPressed: () {
-        //         html.window
-        //             .open('https://drive.google.com/file/d/1FaHIzT9FigDHLx8NlxFIyQfjJTyN9WQ6/view?usp=sharing', "pdf");
-        //       },
-        //       child: Text(
-        //         "RESUME",
-        //         style: GoogleFonts.montserrat(
-        //           color: themeProv.lightTheme ? Colors.black : Colors.white,
-        //           fontWeight: FontWeight.w300,
-        //         ),
-        //       ),
-        //     ),
+        // const SizedBox(width: 15.0),
+        // SizedBox(
+        //   height: 30.0,
+        //   child: Switch(
+        //     inactiveTrackColor: Colors.grey,
+        //     value: !themeProv.lightTheme,
+        //     onChanged: (value) {
+        //       themeProv.lightTheme = !value;
+        //     },
+        //     activeColor: kPrimaryColor,
         //   ),
         // ),
-        const SizedBox(width: 15.0),
-        SizedBox(
-          height: 30.0,
-          child: Switch(
-            inactiveTrackColor: Colors.grey,
-            value: !themeProv.lightTheme,
-            onChanged: (value) {
-              themeProv.lightTheme = !value;
-            },
-            activeColor: kPrimaryColor,
-          ),
-        ),
         const SizedBox(width: 15.0),
       ],
     );
@@ -263,65 +240,65 @@ class MainPageState extends State<MainPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0, right: 16.0, left: 16.0, bottom: 8.0),
-                child: ListTile(
-                  leading: Container(
-                    height: 45,
-                    width: 45,
-                    margin: const EdgeInsets.only(right: 13.0),
-                    alignment: Alignment.topCenter,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: Image.asset(
-                          'assets/im_profile.png',
-                          gaplessPlayback: true,
-                        ).image,
-                        fit: BoxFit.cover,
-                        onError: (error, stacktrace) {
-                          // setState() {
-                          //   imgVariable = AssetImage('assets/could_not_load_img.jpg');
-                          // }
-                        },
-                      ),
-                    ),
-                  ),
-                  title: Text(
-                    "Motey",
-                    style: TextStyle(
-                      // fontFamily: "Agustina",
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                      color: themeProvider.lightTheme ? Colors.black : Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              Divider(
-                color: theme.lightTheme ? Colors.grey[200] : Colors.white,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 16.0, left: 16.0),
-                child: ListTile(
-                  leading: const Icon(
-                    Icons.light_mode,
-                    color: kPrimaryColor,
-                  ),
-                  title: Text("Dark Mode", style: TextStyle(color: theme.lightTheme ? Colors.black : Colors.white)),
-                  trailing: Switch(
-                    inactiveTrackColor: Colors.grey,
-                    value: !theme.lightTheme,
-                    onChanged: (value) {
-                      theme.lightTheme = !value;
-                    },
-                    activeColor: kPrimaryColor,
-                  ),
-                ),
-              ),
-              Divider(
-                color: theme.lightTheme ? Colors.grey[200] : Colors.white,
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 8.0, right: 16.0, left: 16.0, bottom: 8.0),
+              //   child: ListTile(
+              //     // leading: Container(
+              //     //   height: 45,
+              //     //   width: 45,
+              //     //   margin: const EdgeInsets.only(right: 13.0),
+              //     //   alignment: Alignment.topCenter,
+              //     //   decoration: BoxDecoration(
+              //     //     shape: BoxShape.circle,
+              //     //     image: DecorationImage(
+              //     //       image: Image.asset(
+              //     //         'assets/im_profile.png',
+              //     //         gaplessPlayback: true,
+              //     //       ).image,
+              //     //       fit: BoxFit.cover,
+              //     //       onError: (error, stacktrace) {
+              //     //         // setState() {
+              //     //         //   imgVariable = AssetImage('assets/could_not_load_img.jpg');
+              //     //         // }
+              //     //       },
+              //     //     ),
+              //     //   ),
+              //     // ),
+              //     title: Text(
+              //       "Motey",
+              //       style: TextStyle(
+              //         fontFamily: "Agustina",
+              //         fontSize: 20,
+              //         fontWeight: FontWeight.w400,
+              //         color: themeProvider.lightTheme ? Colors.black : Colors.white,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // Divider(
+              //   color: theme.lightTheme ? Colors.grey[200] : Colors.white,
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(right: 16.0, left: 16.0),
+              //   child: ListTile(
+              //     leading: const Icon(
+              //       Icons.light_mode,
+              //       color: kPrimaryColor,
+              //     ),
+              //     title: Text("Dark Mode", style: TextStyle(color: theme.lightTheme ? Colors.black : Colors.white)),
+              //     trailing: Switch(
+              //       inactiveTrackColor: Colors.grey,
+              //       value: !theme.lightTheme,
+              //       onChanged: (value) {
+              //         theme.lightTheme = !value;
+              //       },
+              //       activeColor: kPrimaryColor,
+              //     ),
+              //   ),
+              // ),
+              // Divider(
+              //   color: theme.lightTheme ? Colors.grey[200] : Colors.white,
+              // ),
               for (int i = 0; i < _sectionsName.length; i++)
                 _appBarActions(_sectionsName[i], i, _sectionsIcons[i], theme),
               // Padding(

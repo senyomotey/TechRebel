@@ -1,6 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:techrebel.dev/widget/social_icon_button.dart';
+import '../../animations/bottom_animation.dart';
 import '../../animations/entrance_fader.dart';
 import '../../constants.dart';
 import '../../provider/theme_provider.dart';
@@ -54,22 +56,13 @@ class HomeDesktop extends StatelessWidget {
                         color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       ),
                     ),
-                    // EntranceFader(
-                    //   offset: const Offset(0, 0),
-                    //   delay: const Duration(seconds: 2),
-                    //   duration: const Duration(milliseconds: 800),
-                    //   child: Image.asset(
-                    //     "assets/hi.gif",
-                    //     height: height * 0.05,
-                    //   ),
-                    // ),
                   ],
                 ),
                 SizedBox(
                   height: height * 0.04,
                 ),
                 AdaptiveText(
-                  "Senyo",
+                  "Tech",
                   style: GoogleFonts.montserrat(
                       fontSize: width < 1200 ? height * 0.085 : height * 0.095,
                       fontWeight: FontWeight.w100,
@@ -77,66 +70,66 @@ class HomeDesktop extends StatelessWidget {
                       letterSpacing: 4.0),
                 ),
                 AdaptiveText(
-                  "Motey",
+                  "Rebek",
                   style: GoogleFonts.montserrat(
                       color: themeProvider.lightTheme ? Colors.black : Colors.white,
                       fontSize: width < 1200 ? height * 0.085 : height * 0.095,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 5.0),
                 ),
-                EntranceFader(
-                  offset: const Offset(-10, 0),
-                  delay: const Duration(seconds: 1),
-                  duration: const Duration(milliseconds: 800),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.play_arrow_rounded,
-                        color: kPrimaryColor,
-                      ),
-                      AnimatedTextKit(
-                        isRepeatingAnimation: true,
-                        animatedTexts: [
-                          TypewriterAnimatedText(
-                            '',
-                            textStyle: GoogleFonts.montserrat(
-                              fontSize: height * 0.03,
-                              fontWeight: FontWeight.w200,
-                              color: themeProvider.lightTheme ? Colors.black : Colors.white,
-                            ),
-                            speed: const Duration(milliseconds: 50),
-                          )
-                        ],
-                      ),
-                      TyperAnimatedTextKit(
-                          isRepeatingAnimation: true,
-                          speed: const Duration(milliseconds: 50),
-                          textStyle: GoogleFonts.montserrat(
-                            fontSize: height * 0.03,
-                            fontWeight: FontWeight.w200,
-                            color: themeProvider.lightTheme ? Colors.black : Colors.white,
-                          ),
-                          text: const [" Flutter Developer", " Backend Developer", " Technical Writer"]),
-                    ],
-                  ),
-                ),
+                // EntranceFader(
+                //   offset: const Offset(-10, 0),
+                //   delay: const Duration(seconds: 1),
+                //   duration: const Duration(milliseconds: 800),
+                //   child: Row(
+                //     children: [
+                //       const Icon(
+                //         Icons.play_arrow_rounded,
+                //         color: kPrimaryColor,
+                //       ),
+                //       AnimatedTextKit(
+                //         isRepeatingAnimation: true,
+                //         animatedTexts: [
+                //           TypewriterAnimatedText(
+                //             '',
+                //             textStyle: GoogleFonts.montserrat(
+                //               fontSize: height * 0.03,
+                //               fontWeight: FontWeight.w200,
+                //               color: themeProvider.lightTheme ? Colors.black : Colors.white,
+                //             ),
+                //             speed: const Duration(milliseconds: 50),
+                //           )
+                //         ],
+                //       ),
+                //       TyperAnimatedTextKit(
+                //           isRepeatingAnimation: true,
+                //           speed: const Duration(milliseconds: 50),
+                //           textStyle: GoogleFonts.montserrat(
+                //             fontSize: height * 0.03,
+                //             fontWeight: FontWeight.w200,
+                //             color: themeProvider.lightTheme ? Colors.black : Colors.white,
+                //           ),
+                //           text: const [" Flutter Developer", " Backend Developer", " Technical Writer"]),
+                //     ],
+                //   ),
+                // ),
                 SizedBox(
                   height: height * 0.05,
                 ),
-                // Row(
-                //   mainAxisSize: MainAxisSize.min,
-                //   children: List.generate(
-                //     kSocialIcons.length,
-                //     (index) => WidgetAnimator(
-                //       child: SocialMediaIconBtn(
-                //         icon: kSocialIcons[index],
-                //         socialLink: kSocialLinks[index],
-                //         height: height * 0.035,
-                //         horizontalPadding: width * 0.005,
-                //       ),
-                //     ),
-                //   ),
-                // ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: List.generate(
+                    kSocialIcons.length,
+                    (index) => WidgetAnimator(
+                      child: SocialMediaIconButton(
+                        icon: kSocialIcons[index],
+                        socialLink: kSocialLinks[index],
+                        height: height * 0.035,
+                        horizontalPadding: width * 0.005,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
