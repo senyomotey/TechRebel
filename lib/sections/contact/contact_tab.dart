@@ -9,8 +9,8 @@ import '../../widget/contact_card.dart';
 import '../../widget/custom_text_heading.dart';
 import '../../widget/social_icon_button.dart';
 
-class ContactMobile extends StatelessWidget {
-  const ContactMobile({Key? key}) : super(key: key);
+class ContactTab extends StatelessWidget {
+  const ContactTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,26 +20,6 @@ class ContactMobile extends StatelessWidget {
       children: [
         const CustomSectionHeading(text: "\nGet in Touch"),
         const CustomSectionSubHeading(text: "Let's build something together \n\n"),
-        // CarouselSlider.builder(
-        //   itemCount: 3,
-        //   itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
-        //     padding: const EdgeInsets.symmetric(vertical: 10.0),
-        //     child: ProjectCard(
-        //       cardWidth: width > 480 ? width * 0.5 : width * 0.8,
-        //       projectIconData: kContactIcons[i],
-        //       projectTitle: kContactTitles[i],
-        //       projectDescription: kContactDetails[i],
-        //     ),
-        //   ),
-        //   options: CarouselOptions(
-        //       height: height * 0.3,
-        //       autoPlay: true,
-        //       autoPlayInterval: const Duration(seconds: 5),
-        //       enlargeCenterPage: true,
-        //       autoPlayCurve: Curves.fastOutSlowIn,
-        //       autoPlayAnimationDuration: const Duration(milliseconds: 800),
-        //       enableInfiniteScroll: false),
-        // ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,13 +30,13 @@ class ContactMobile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    width: width < 640 ? width * 0.57 : width * 0.57,
-                    height: width < 640 ? width * 0.125 : width * 0.125,
+                    width: width < 640 ? width * 0.5 : width * 0.5,
+                    height: width < 640 ? width * 0.115 : width * 0.10,
                     alignment: Alignment.center,
                     child: AdaptiveText(
                       "May",
                       style: GoogleFonts.montserrat(
-                        fontSize: MediaQuery.of(context).size.width * 0.040,
+                        fontSize: MediaQuery.of(context).size.width * 0.035,
                         fontWeight: FontWeight.w700,
                         color: Colors.black,
                       ),
@@ -71,13 +51,13 @@ class ContactMobile extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: width < 640 ? width * 0.57 : width * 0.57,
-                    height: width < 640 ? width * 0.30 : width * 0.14,
+                    width: width < 640 ? width * 0.5 : width * 0.5,
+                    height: width < 640 ? width * 0.30 : width * 0.3,
                     alignment: Alignment.center,
                     child: AdaptiveText(
                       "12",
                       style: GoogleFonts.montserrat(
-                        fontSize: MediaQuery.of(context).size.width * 0.14,
+                        fontSize: MediaQuery.of(context).size.width * 0.11,
                         fontWeight: FontWeight.w800,
                         color: Colors.grey[100],
                       ),
@@ -86,13 +66,13 @@ class ContactMobile extends StatelessWidget {
                     decoration: BoxDecoration(color: Colors.grey[900]),
                   ),
                   Container(
-                    width: width < 640 ? width * 0.57 : width * 0.57,
-                    padding: EdgeInsets.only(top: 0.0, bottom: width < 640 ? width * 0.06 : width * 0.06),
+                    width: width < 640 ? width * 0.5 : width * 0.5,
+                    padding: EdgeInsets.only(top: 0.0, bottom: width < 640 ? width * 0.04 : width * 0.04),
                     alignment: Alignment.center,
                     child: AdaptiveText(
                       "Friday",
                       style: GoogleFonts.montserrat(
-                        fontSize: MediaQuery.of(context).size.width * 0.037,
+                        fontSize: MediaQuery.of(context).size.width * 0.03,
                         fontWeight: FontWeight.w500,
                         color: Colors.grey[100],
                       ),
@@ -112,7 +92,7 @@ class ContactMobile extends StatelessWidget {
                   InkWell(
                     onTap: () {},
                     child: Container(
-                      width: width < 640 ? width * 0.57 : width * 0.57,
+                      width: width < 640 ? width * 0.5 : width * 0.5,
                       height: width < 640 ? width * 0.08 : width * 0.08,
                       alignment: Alignment.center,
                       child: Row(

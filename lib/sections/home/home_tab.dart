@@ -89,7 +89,7 @@ class HomeTab extends StatelessWidget {
                 //   ],
                 // ),
                 SizedBox(
-                  height: height * 0.045,
+                  height: height * 0.02,
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.min,

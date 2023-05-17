@@ -52,7 +52,7 @@ class ContactCardState extends State<ContactCard> {
             }
           },
           child: Container(
-            width: 340.0,
+            width: MediaQuery.of(context).size.height * 0.4,
             alignment: Alignment.center,
             padding: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.02,
