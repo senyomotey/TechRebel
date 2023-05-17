@@ -48,8 +48,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.senyomotey.techrebeldev"
+        applicationId "com.senyomotey.techrebel"
         minSdkVersion 19
         targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()

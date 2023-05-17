@@ -1,4 +1,4 @@
-package com.senyomotey.techrebeldev
+package com.senyomotey.techrebel
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.senyomotey.techrebeldev">
+    package="com.senyomotey.techrebel">
    <application
-        android:label="portfolio"
+        android:label="Tech Rebel"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
