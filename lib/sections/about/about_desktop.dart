@@ -13,8 +13,6 @@ import 'package:provider/provider.dart';
 import '../../widget/photo_card.dart';
 
 class AboutDesktop extends StatelessWidget {
-  final _communityLogoHeight = [60.0, 70.0, 30.0, 70.0];
-
   AboutDesktop({Key? key}) : super(key: key);
 
   @override
@@ -48,7 +46,7 @@ class AboutDesktop extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       AdaptiveText(
-                        "I'm Senyo Motey, a Flutter Developer, Laravel Developer and UI designer.",
+                        "I'm Senyo Motey, a forward-thinking software engineer, with five years of experience in building, integrating, testing and maintaining applications for mobile devices and the web.\n\nI am also known for writing efficient, maintainable, and reusable code, proficient in design, data structures, problem-solving, debugging and familiar with Supervisory Control and Data Acquisition (SCADA)",
                         style: GoogleFonts.montserrat(
                           fontSize: height * 0.025,
                           fontWeight: FontWeight.w400,
@@ -110,27 +108,27 @@ class AboutDesktop extends StatelessWidget {
                       StaggeredGridTile.count(
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 2,
-                        child: PhotoCard(index: 0),
+                        child: PhotoCard(name: 'assets/gdiw.jpg'),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 2,
                         mainAxisCellCount: 1,
-                        child: PhotoCard(index: 1),
+                        child: PhotoCard(name: 'assets/gdiw.jpg'),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 1,
-                        child: PhotoCard(index: 2),
+                        child: PhotoCard(name: 'assets/gdiw.jpg'),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 1,
                         mainAxisCellCount: 2,
-                        child: PhotoCard(index: 3),
+                        child: PhotoCard(name: 'assets/gdiw.jpg'),
                       ),
                       StaggeredGridTile.count(
                         crossAxisCellCount: 3,
                         mainAxisCellCount: 2,
-                        child: PhotoCard(index: 4),
+                        child: PhotoCard(name: 'assets/gdiw.jpg'),
                       ),
                     ],
                   ),

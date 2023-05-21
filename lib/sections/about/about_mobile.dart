@@ -12,8 +12,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AboutMobile extends StatelessWidget {
-  final _communityLogoHeight = [60.0, 70.0, 30.0, 70.0];
-
   AboutMobile({Key? key}) : super(key: key);
 
   @override
@@ -36,7 +34,7 @@ class AboutMobile extends StatelessWidget {
             height: height * 0.03,
           ),
           Text(
-            "I'm Senyo Motey, a Flutter Developer, Laravel Developer and UI designer.",
+            "I'm Senyo Motey, a forward-thinking software engineer, with five years of experience in building, integrating, testing and maintaining applications for mobile devices and the web.\n\nI am also known for writing efficient, maintainable, and reusable code, proficient in design, data structures, problem-solving, debugging and familiar with Supervisory Control and Data Acquisition (SCADA)",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.022,
               fontWeight: FontWeight.w400,
@@ -71,7 +69,7 @@ class AboutMobile extends StatelessWidget {
                       style: GoogleFonts.montserrat(
                           fontSize: MediaQuery.of(context).size.height * 0.018,
                           color: Colors.white,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w500),
                     ),
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
@@ -98,27 +96,27 @@ class AboutMobile extends StatelessWidget {
               StaggeredGridTile.count(
                 crossAxisCellCount: 2,
                 mainAxisCellCount: 2,
-                child: PhotoCard(index: 0),
+                child: PhotoCard(name: 'assets/agrocenta_1.jpg'),
               ),
               StaggeredGridTile.count(
                 crossAxisCellCount: 2,
                 mainAxisCellCount: 1,
-                child: PhotoCard(index: 1),
+                child: PhotoCard(name: 'assets/gdiw.jpg'),
               ),
               StaggeredGridTile.count(
                 crossAxisCellCount: 1,
                 mainAxisCellCount: 1,
-                child: PhotoCard(index: 2),
+                child: PhotoCard(name: 'assets/agrocenta_2.jpg'),
               ),
               StaggeredGridTile.count(
                 crossAxisCellCount: 1,
                 mainAxisCellCount: 2,
-                child: PhotoCard(index: 3),
+                child: PhotoCard(name: 'assets/gdiw.jpg'),
               ),
               StaggeredGridTile.count(
                 crossAxisCellCount: 3,
                 mainAxisCellCount: 2,
-                child: PhotoCard(index: 4),
+                child: PhotoCard(name: 'assets/gdiw.jpg'),
               ),
             ],
           ),
