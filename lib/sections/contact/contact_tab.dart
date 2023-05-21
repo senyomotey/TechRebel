@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:ionicons/ionicons.dart';
 import '../../animations/bottom_animation.dart';
 import '../../constants.dart';
@@ -16,6 +17,9 @@ class ContactTab extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+    late DateTime now = DateTime.now();
+
     return Column(
       children: [
         const CustomSectionHeading(text: "\nGet in Touch"),
@@ -34,7 +38,7 @@ class ContactTab extends StatelessWidget {
                     height: width < 640 ? width * 0.115 : width * 0.10,
                     alignment: Alignment.center,
                     child: AdaptiveText(
-                      "May",
+                      DateFormat('MMMM').format(now).toString(),
                       style: GoogleFonts.montserrat(
                         fontSize: MediaQuery.of(context).size.width * 0.035,
                         fontWeight: FontWeight.w700,
@@ -55,7 +59,7 @@ class ContactTab extends StatelessWidget {
                     height: width < 640 ? width * 0.30 : width * 0.3,
                     alignment: Alignment.center,
                     child: AdaptiveText(
-                      "12",
+                      now.day.toString(),
                       style: GoogleFonts.montserrat(
                         fontSize: MediaQuery.of(context).size.width * 0.11,
                         fontWeight: FontWeight.w800,
@@ -70,7 +74,7 @@ class ContactTab extends StatelessWidget {
                     padding: EdgeInsets.only(top: 0.0, bottom: width < 640 ? width * 0.04 : width * 0.04),
                     alignment: Alignment.center,
                     child: AdaptiveText(
-                      "Friday",
+                      DateFormat('EEEE').format(now).toString(),
                       style: GoogleFonts.montserrat(
                         fontSize: MediaQuery.of(context).size.width * 0.03,
                         fontWeight: FontWeight.w500,

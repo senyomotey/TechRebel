@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:ionicons/ionicons.dart';
 import '../../animations/bottom_animation.dart';
 import '../../constants.dart';
@@ -16,6 +17,8 @@ class ContactDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+    late DateTime now = DateTime.now();
 
     return Container(
       padding: EdgeInsets.symmetric(horizontal: width * 0.02, vertical: height * 0.02),
@@ -64,7 +67,7 @@ class ContactDesktop extends StatelessWidget {
                       height: width < 1200 ? height * 0.07 : height * 0.07,
                       alignment: Alignment.center,
                       child: AdaptiveText(
-                        "May",
+                        DateFormat('MMMM').format(now).toString(),
                         style: GoogleFonts.montserrat(
                           fontSize: MediaQuery.of(context).size.height * 0.02,
                           fontWeight: FontWeight.w800,
@@ -85,7 +88,7 @@ class ContactDesktop extends StatelessWidget {
                       height: width < 1200 ? height * 0.14 : height * 0.14,
                       alignment: Alignment.center,
                       child: AdaptiveText(
-                        "12",
+                        now.day.toString(),
                         style: GoogleFonts.montserrat(
                           fontSize: MediaQuery.of(context).size.height * 0.06,
                           fontWeight: FontWeight.w800,
@@ -100,7 +103,7 @@ class ContactDesktop extends StatelessWidget {
                       height: width < 1200 ? height * 0.07 : height * 0.07,
                       alignment: Alignment.center,
                       child: AdaptiveText(
-                        "Friday",
+                        DateFormat('EEEE').format(now).toString(),
                         style: GoogleFonts.montserrat(
                           fontSize: MediaQuery.of(context).size.height * 0.018,
                           fontWeight: FontWeight.w500,

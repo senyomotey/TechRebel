@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:intl/intl.dart';
 import '../../animations/bottom_animation.dart';
 import '../../constants.dart';
 import '../../widget/adaptive_text.dart';
@@ -16,6 +17,9 @@ class ContactMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+    late DateTime now = DateTime.now();
+
     return Column(
       children: [
         const CustomSectionHeading(text: "\nGet in Touch"),
@@ -54,7 +58,7 @@ class ContactMobile extends StatelessWidget {
                     height: width < 640 ? width * 0.125 : width * 0.125,
                     alignment: Alignment.center,
                     child: AdaptiveText(
-                      "May",
+                      DateFormat('MMMM').format(now).toString(),
                       style: GoogleFonts.montserrat(
                         fontSize: MediaQuery.of(context).size.width * 0.040,
                         fontWeight: FontWeight.w700,
@@ -75,7 +79,7 @@ class ContactMobile extends StatelessWidget {
                     height: width < 640 ? width * 0.30 : width * 0.14,
                     alignment: Alignment.center,
                     child: AdaptiveText(
-                      "12",
+                      now.day.toString(),
                       style: GoogleFonts.montserrat(
                         fontSize: MediaQuery.of(context).size.width * 0.14,
                         fontWeight: FontWeight.w800,
@@ -90,7 +94,7 @@ class ContactMobile extends StatelessWidget {
                     padding: EdgeInsets.only(top: 0.0, bottom: width < 640 ? width * 0.06 : width * 0.06),
                     alignment: Alignment.center,
                     child: AdaptiveText(
-                      "Friday",
+                      DateFormat('EEEE').format(now).toString(),
                       style: GoogleFonts.montserrat(
                         fontSize: MediaQuery.of(context).size.width * 0.037,
                         fontWeight: FontWeight.w500,
